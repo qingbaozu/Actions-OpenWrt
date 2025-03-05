@@ -1,36 +1,28 @@
 /dts-v1/;
-#include "mt7981.dtsi"
+#include "mt7981-cmcc-rax3000m-xr30.dtsi"
 
 / {
 	aliases {
 		led-boot = &red_led;
 		led-failsafe = &red_led;
-		led-running = &green_led;
-		led-upgrade = &blue_led;
-	};
-
-	memory {
-		reg = <0 0x40000000 0 0x20000000>;
+		led-running = &white_led;
+		led-upgrade = &red_led;
 	};
 
 	leds {
 		compatible = "gpio-leds";
 
 		red_led: red {
-			label = "rax3000m:red";
+			label = "xr30:red";
 			gpios = <&pio 35 GPIO_ACTIVE_LOW>;
 		};
 
-		green_led: green {
-			label = "rax3000m:green";
-			gpios = <&pio 9 GPIO_ACTIVE_LOW>;
-		};
-
-		blue_led: blue {
-			label = "rax3000m:blue";
-			gpios = <&pio 12 GPIO_ACTIVE_LOW>;
+		white_led: white {
+			label = "xr30:white";
+			gpios = <&pio 34 GPIO_ACTIVE_LOW>;
 		};
 	};
+};
 
 	gpio-keys {
 		compatible = "gpio-keys";
