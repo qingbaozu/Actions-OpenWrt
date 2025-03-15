@@ -17,7 +17,7 @@ on:
       LAN_IP:
         description: 'Set LAN IP Address'
         required: true
-        default: '192.168.1.1'
+        default: '192.168.123.1'
       WIFI_DRIVER:
         description: 'Choose WiFi Driver'
         required: true
@@ -41,7 +41,7 @@ on:
       EEPROM:
         description: 'Use nx30pro eeprom and fixed WiFi MAC address'
         required: true
-        default: true
+        default: false
         type: boolean
       APP_MTK:
         description: 'Use luci-app-mtk wifi config'
